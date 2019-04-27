@@ -95,7 +95,7 @@ async function build() {
       throw reason
     })
     console.log(target + ' uploaded.')
-    huh.dump()
+    setTimeout(() => huh.dump(), 120000)
   }
 }
 
