@@ -62,7 +62,8 @@ async function build() {
       verbose: Boolean(env.NEXE_VERBOSE!),
       target,
       make: ['-j' + cpus().length],
-      output
+      vcBuild: ['nosign', 'release', 'msbuild_args="/3GB"'],
+      output: './out'
     }
   console.log('Building: ' + target + ' on ' + buildHost)
   const stop = keepalive()
